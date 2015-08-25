@@ -5,3 +5,36 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+[
+    {
+        complete: true,
+        name: "Learn Rails"
+    },
+    {
+        complete: false,
+        name: "Learn Football"
+    },
+    {
+        complete: true,
+        name: "Learn Gym"
+    },
+    {
+        complete: true,
+        name: "Learn Swimming"
+    },
+    {
+        complete: false,
+        name: "Learn Piano"
+    },
+    {
+        complete: true,
+        name: "Learn Math"
+    },
+    {
+        complete: true,
+        name: "Learn Ruby"
+    },
+].each do |task|
+  Task.create(name: task[:name], complete: task[:complete])
+end
